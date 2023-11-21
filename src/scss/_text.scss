@@ -1,0 +1,53 @@
+@import "./variables";
+
+html {
+  font-size: 16px;
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+  }
+}
+
+.font-cairo-regular {
+  font-family: "Cairo-Regular" !important;
+}
+
+.font-cairo-medium {
+  font-family: "Cairo-Medium" !important;
+}
+
+.font-cairo-semibold {
+  font-family: "Cairo-Semibold" !important;
+}
+
+.font-cairo-bold {
+  font-family: "Cairo-Bold" !important;
+}
+
+$sizes: (10, 12, 13, 14, 15, 18, 20, 22, 25, 35);
+@each $size in $sizes {
+  .fsize-#{$size} {
+    font-size: calc($size / 16) + rem !important;
+  }
+}
+
+.text-primary-override {
+  color: $primary-override !important;
+}
+
+.text-secondary-override {
+  color: $secondary-override !important;
+}
+.border-primary-override {
+  border-color: $primary-override !important;
+}
+.text-error {
+  color: $error !important;
+}
+
+.text-disabled {
+  color: $grey-Placeholder !important;
+}
+
+.text-lightblue {
+  color: $light-blue !important;
+}
