@@ -2,15 +2,13 @@ import React from "react";
 
 import "./TriggerButton.scss";
 
-export const TriggerButton = ({
-  triggerText,
-  buttonRef,
-  showModal
-}) => {
+export const TriggerButton = ({ buttonRef, showModal }) => {
   return (
-    <button className="button-55" ref={buttonRef} onClick={showModal}>
-      {triggerText}
-    </button>
+    <button
+      className="chatbot-trigger"
+      ref={buttonRef}
+      onClick={showModal}
+    ></button>
   );
 };
 export default TriggerButton;

@@ -37,7 +37,6 @@ class ModalContainer extends React.Component {
         <TriggerButton
           showModal={this.showModal}
           buttonRef={(n) => (this.TriggerButton = n)}
-          triggerText={this.props.triggerText}
         />
         {this.state.isShown ? (
           <>
