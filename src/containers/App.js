@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-import ModalContainer from "./ModalContainer";
+import { TriggerButton } from "../components/TriggerButton";
+import Chatbot from "./Chatbot";
 import "./App.scss";
 
 const App = () => {
+  const [isShown, setIsShown] = useState(false);
+  const toggleShow = () => {
+    setIsShown(!isShown);
+  };
   return (
-    <div className="App">
-      <ModalContainer triggerText={"Open ChatBot"} />
-    </div>
+    <>
+      <TriggerButton toggleShow={toggleShow} />
+      {isShown && (
+        <div className="chatbot-container">
+          <Chatbot />
+        </div>
+      )}
+    </>
   );
 };
 
